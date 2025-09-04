@@ -148,6 +148,7 @@ func editHandler(w http.ResponseWriter, r *http.Request, title string) {
 	}
 	renderTemplate(w, "edit", page)
 }
+
 func main() {
 	if err := initTemplates(); err != nil {
 		log.Fatalf("Failed to init: %v", err)
@@ -158,7 +159,7 @@ func main() {
 	http.HandleFunc("/add", addHandler)
 	http.HandleFunc("/", listHandler)
 
-	log.Printf("Open Your Browser and go to http://localhost:8080")
+	log.Printf("Server is running at port 8080")
 	if err := http.ListenAndServe(port, nil); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
