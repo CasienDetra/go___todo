@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold">Add Task Here</h1>
+    <form action="/add" method="POST">
+      <div>
+        <label class="text-xl" for="task">Task</label>
+        <input type="text" name="title" />
+        <h3 class="text-xl">Your text here</h3>
+        <div>
+          <textarea name="body" rows="20" cols="80"></textarea>
+          <button>
+            <input type="submit" value="Create" />
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
